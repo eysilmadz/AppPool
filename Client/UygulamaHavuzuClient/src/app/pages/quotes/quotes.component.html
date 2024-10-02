@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Random Quotes</h1>
+    <div class="card">
+        <p-card header="Quotes Card">
+            <p class="m-0">
+                {{quote}}
+            </p>
+            <p style="display: flex; justify-content: right; margin: 5px;">{{author}}</p>
+            <div class="icon-buttons">
+                <p-button icon="pi pi-sync" [rounded]="true" [text]="true" [raised]="true" severity="secondary" (click)="getRandomQuote()" />
+                <p-button icon="pi pi-twitter" [rounded]="true" [text]="true" [raised]="true" severity="secondary" (click)="shareOnTwitter()"/>
+            </div>
+        </p-card>
+    </div>
+</div>

@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+ .todoContainer {
+    width: 100%;
+    height: 100vh;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.fullCheck {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.fullCheck p-button{
+    margin-right: 5px;
+}
+
+.todos {
+    background-color: #E0F2E9;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.text {
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+    color: #333;
+    margin-left: 15px;
+}
+
+.description {
+    color: #666;
+    margin-left: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: right;
+    margin: 5px;
+}
+
+.buttons p-button {
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.editing{
+    background-color: #E0F2E9;
+    border-radius: 8px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.add  {
+    background-color: #E0F2E9;
+    border-radius: 8px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add p-button {
+    margin-right: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.completed .title {
+    text-decoration: line-through;
+  }
+  
+.completed .description {
+    text-decoration: line-through;
+}
+  
+
+/*Responsive ayarlamalar*/
+
+@media (max-width: 768px) {
+   .todoContainer {
+        padding: 10px;
+    }
+
+     h3 {
+        font-size: 20px;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .todoContainer {
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .buttons p-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+} 

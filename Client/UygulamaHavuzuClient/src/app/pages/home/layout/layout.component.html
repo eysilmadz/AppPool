@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<div *ngIf="!isContentVisible" class="card-container">
+  <app-cards class="card1" title="To-Do List" description="Yapılacaklar listesine göz atın" route="/todo"></app-cards>
+  <app-cards class="card2" title="BMI Hesaplayıcı" description="Vücut Kitle İndeksinizi hesaplayın"
+    route="/bmi"></app-cards>
+  <app-cards class="card3" title="Hava Durumu" description="Bugünkü hava durumunu öğrenin" route="/weather"></app-cards>
+  <app-cards class="card4" title="Rastgele Alıntılar" description="Rastgele alıntılar alın" route="/quotes"></app-cards>
+</div>
+
+
+<app-footer></app-footer>

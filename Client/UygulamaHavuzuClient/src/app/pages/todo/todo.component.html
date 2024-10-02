@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="todoContainer">
+        <h3>Todo List</h3>
+        <div class="fullCheck">
+            <p-button icon="pi pi-list-check" [rounded]="true" [text]="true" [raised]="true" severity="secondary" (click)="completeAll()"/>
+            <p-button icon="pi pi-refresh" [rounded]="true" [text]="true" [raised]="true" severity="secondary" (click)="undoAll()"></p-button>
+        </div>
+        <div class="todos" *ngFor="let todo of todos" [ngClass]="{ 'completed': todo.isCompleted }">
+            <div class="text" *ngIf="!todo.isEditing">
+                <p class="title">{{ todo.title }}</p>
+                <p class="description">{{ todo.description }}</p>
+            </div>
+            <div class="editing" *ngIf="todo.isEditing">
+                <input type="text" pInputText [(ngModel)]="todo.title" placeholder="Edit title" />
+                <textarea rows="2" cols="30" pInputTextarea [(ngModel)]="todo.description" placeholder="Edit description"></textarea>
+              </div>
+            <div class="buttons">
+                <p-button *ngIf="!todo.isEditing" icon="pi pi-file-edit" [rounded]="true" [text]="true" [raised]="true" severity="secondary" (click)="startEditTodo(todo)"/>
+                <p-button *ngIf="todo.isEditing" icon="pi pi-check" [rounded]="true" [text]="true" [raised]="true" severity="success" (click)="updateTodo(todo)" />
+        <p-button *ngIf="todo.isEditing" icon="pi pi-times" [rounded]="true" [text]="true" [raised]="true" severity="danger" (click)="cancelEdit(todo)" />
+                <p-button icon="pi pi-trash" [rounded]="true" [text]="true" [raised]="true" severity="secondary" (click)="deleteTodo(todo.id!)"/>
+                <p-button icon="pi pi-file-check" [rounded]="true" [text]="true" [raised]="true" severity="secondary" (click)="completeTodo(todo)"/>
+            </div>
+        </div>
+        <div class="add">
+            <input type="text" pInputText [(ngModel)]="newTodo.title" class="title" placeholder="Add title" />
+            <textarea rows="2" cols="30" pInputTextarea [(ngModel)]="newTodo.description" class="description"
+                placeholder="Add description">
+            </textarea>
+            <p-button icon="pi pi-plus-circle" [rounded]="true" [text]="true" [raised]="true" severity="secondary"
+                (click)="addTodo()" />
+        </div>
+    </div>
+</div>

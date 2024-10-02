@@ -1,0 +1,27 @@
+<div class="container">
+    <form [formGroup]="loginFormGroup" (ngSubmit)="onSave()">
+        <h2>Register</h2>
+
+        <p-inputGroup>
+            <input type="text" pInputText formControlName="userName" placeholder="Username" />
+        </p-inputGroup>
+        <p-message *ngIf="loginFormGroup.get('userName')?.invalid && loginFormGroup.get('userName')?.touched"
+            severity="error" text="Username is required."></p-message>
+
+        <p-inputGroup>
+            <input type="email" pInputText formControlName="email" placeholder="Email" />
+        </p-inputGroup>
+        <p-message *ngIf="loginFormGroup.get('email')?.invalid && loginFormGroup.get('email')?.touched" severity="error"
+            [text]="getEmailErrorMessage()"></p-message>
+
+        <p-password class="password" formControlName="password" placeholder="Password"></p-password>
+        <p-message *ngIf="loginFormGroup.get('password')?.invalid && loginFormGroup.get('password')?.touched"
+            severity="error" [text]="getPasswordErrorMessage()"></p-message>
+
+        <div class="buttons">
+            <p-button type="submit" label="Sign Up" [disabled]="loginFormGroup.invalid"></p-button>
+            <p-button type="button" label="Reset" (click)="loginFormGroup.reset()"></p-button>
+        </div>
+
+    </form>
+</div>

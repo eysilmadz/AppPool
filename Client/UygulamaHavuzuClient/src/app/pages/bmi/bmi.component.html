@@ -1,0 +1,50 @@
+<div class="container">
+
+    <div class="form">
+
+        <h1>BMI Calculactor</h1>
+
+        <div class="float">
+            <p-floatLabel style="margin: 13px;">
+                <input id="float" type="text" pInputText [(ngModel)]="height" />
+                <label for="height">Height(cm)</label>
+            </p-floatLabel>
+
+            <p-floatLabel style="margin: 13px;">
+                <input id="float" type="text" pInputText [(ngModel)]="weight" />
+                <label for="weight">Weight(kg)</label>
+            </p-floatLabel>
+        </div>
+
+        <div class="buttons">
+            <p-button label="Calculate" severity="secondary" (onClick)="calculateBMI()" />
+            <p-button label="Reset" severity="danger" (onClick)="reset()" />
+        </div>
+
+        <div class="label" *ngIf="Result !== null">
+            <p><b>Your BMI :</b> {{ Result }}</p>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 50px;">BMI Result</h3>
+
+        <div class="information">
+            <div class="card">
+                <p class="range">..-18.5</p>
+                <i>Under Weight</i>
+            </div>
+            <div class="card">
+                <p class="range">18.5-25 </p>
+                <i>Normal Weight</i>
+            </div>
+            <div class="card">
+                <p class="range">25-30</p>
+                <i>Over Weight</i>
+            </div>
+            <div class="card">
+                <p class="range">30-..</p>
+                <i>Obese</i>
+            </div>
+        </div>
+        
+    </div>
+</div>

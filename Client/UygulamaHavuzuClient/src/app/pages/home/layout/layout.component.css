@@ -1,0 +1,64 @@
+
+/* Header ve footer stil ayarları */
+app-header, app-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+
+}
+
+app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Header'ın her zaman üstte olmasını sağlar */
+}
+
+app-footer {
+  position: relative;
+  bottom: 0;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 sütun oluşturur */
+  grid-gap: 2rem; /* Kartlar arasında boşluk bırakır */
+  justify-content: center; /* Kartların yatayda merkezlenmesini sağlar */
+  padding: 1.5rem;
+}
+
+ .card-container .card1 {
+  background-image: url('../../../../assets/images/pexels-breakingpic-3243.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.card2 {
+  background-image: url('../../../../assets/images/pexels-pixabay-53404.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.card3 {
+  background-image: url('../../../../assets/images/pexels-pixabay-531756.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.card4 {
+  background-image: url('../../../../assets/images/pexels-pixabay-278887.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+/* Medya sorgusu ile telefon görünümünde kartları alt alta düzenler */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Kartlar alt alta gelir */
+    padding: 1rem; /* Padding'i küçültür */
+    margin-top: 1rem; /* Header ve kartlar arasına boşluk ekler */
+  }
+}

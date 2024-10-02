@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 15px;
+}
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.float{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 20px;
+}
+
+.information {
+    margin-top: 30px;
+    display: flex;
+
+}
+
+.label{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.card {
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+.range {
+    text-align: center;
+    font-weight: bold;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .form {
+        max-width: 100%;
+        max-height: 100%; /* Küçük ekranlarda genişliği azaltır */
+    }
+
+    .buttons {
+        flex-direction: column; /* Butonlar küçük ekranlarda alt alta gelir */
+        width: 100%;
+    }
+
+    .information {
+        flex-direction: column; /* Kartları küçük ekranlarda dikey hizalar */
+    }
+
+    .card {
+        width: 100%; /* Kartları ekran genişliğine uyarlar */
+    }
+}
+

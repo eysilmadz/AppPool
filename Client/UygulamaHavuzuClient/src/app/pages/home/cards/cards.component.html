@@ -1,0 +1,5 @@
+<div class="card" (click)="navigate()">
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+  <button (click)="navigate(); $event.stopPropagation()">Go to App</button>
+</div>

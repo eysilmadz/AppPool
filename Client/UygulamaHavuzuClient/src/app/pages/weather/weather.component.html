@@ -1,0 +1,42 @@
+<div class="bigContainer">
+  <h1>The Weather App</h1>
+  <div class="container">
+    <div class="city">
+      <div class="search">
+      <p-iconField iconPosition="left">
+        <p-inputIcon styleClass="pi pi-search" />
+        <input type="text" pInputText placeholder="Search" [(ngModel)]="searchCity" (click)="onSearch()" />
+      </p-iconField>
+    </div>
+
+    <div class="cityContainer" *ngIf="cityWeather">
+      <div class="city-details">
+        <div class="provinceName">
+          <label>{{ cityWeather.name }} Province - TR</label>
+        </div>
+        <p class="temp">{{ (cityWeather.main.temp - 273.15) | number: '1.0-0' }} °C</p>
+        <p>{{ cityWeather.weather[0]?.description }}</p>
+      </div>
+      <div class="additional-info">
+        <p>Wind Speed: {{ cityWeather.wind.speed }} m/s</p>
+        <p>Humidity: {{ cityWeather.main.humidity }}%</p>
+        <p>Sunrise: {{ cityWeather.sys.sunrise | date:'HH:mm:ss' }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="major-cities">
+    <div class="city-Card" *ngFor="let weather of majorCitiesWeather">
+      <h4>{{ weather.name }} - {{ weather.sys.country }}</h4>
+      <p class="temp">{{ (weather.main.temp - 273.15) | number: '1.0-0' }} °C</p>
+      <p>{{ weather.weather[0]?.description }}</p>
+      <div class="additional-info">
+        <p>Wind Speed: {{ weather.wind.speed }} m/s</p>
+        <p>Humidity: {{ weather.main.humidity }}%</p>
+        <p>Sunrise: {{ weather.sys.sunrise | date:'HH:mm:ss' }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D21108B9-9362-4BE6-BC3F-1847DBB5CC41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UygulamaHavuzu.Domain", "Core\UygulamaHavuzu.Domain\UygulamaHavuzu.Domain.csproj", "{DF717CEC-90A0-4DE1-9984-23C537781AA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UygulamaHavuzu.Application", "Core\UygulamaHavuzu.Application\UygulamaHavuzu.Application.csproj", "{E1EE85D9-D019-40EB-85C2-05D4F04E4244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{7C68A7DC-FEBD-4E73-9C00-1E4913B5C06B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UygulamaHavuzu.Infrastructure", "Infrastructure\UygulamaHavuzu.Infrastructure\UygulamaHavuzu.Infrastructure.csproj", "{C72E2B6B-19AC-41FC-A4C0-96F0015BE230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UygulamaHavuzu.Persistence", "Infrastructure\UygulamaHavuzu.Persistence\UygulamaHavuzu.Persistence.csproj", "{4B8874F3-3486-46D0-BF7F-504A6819A54E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{3CA80504-4521-49E2-9B45-1F374FD62213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UygulamaHavuzu.API", "Presentation\UygulamaHavuzu.API\UygulamaHavuzu.API.csproj", "{A1FC840F-5AA3-466C-B4FD-AC1819C453B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF717CEC-90A0-4DE1-9984-23C537781AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF717CEC-90A0-4DE1-9984-23C537781AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF717CEC-90A0-4DE1-9984-23C537781AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF717CEC-90A0-4DE1-9984-23C537781AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1EE85D9-D019-40EB-85C2-05D4F04E4244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1EE85D9-D019-40EB-85C2-05D4F04E4244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1EE85D9-D019-40EB-85C2-05D4F04E4244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1EE85D9-D019-40EB-85C2-05D4F04E4244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72E2B6B-19AC-41FC-A4C0-96F0015BE230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72E2B6B-19AC-41FC-A4C0-96F0015BE230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72E2B6B-19AC-41FC-A4C0-96F0015BE230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72E2B6B-19AC-41FC-A4C0-96F0015BE230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8874F3-3486-46D0-BF7F-504A6819A54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8874F3-3486-46D0-BF7F-504A6819A54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8874F3-3486-46D0-BF7F-504A6819A54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8874F3-3486-46D0-BF7F-504A6819A54E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FC840F-5AA3-466C-B4FD-AC1819C453B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FC840F-5AA3-466C-B4FD-AC1819C453B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FC840F-5AA3-466C-B4FD-AC1819C453B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FC840F-5AA3-466C-B4FD-AC1819C453B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF717CEC-90A0-4DE1-9984-23C537781AA5} = {D21108B9-9362-4BE6-BC3F-1847DBB5CC41}
+		{E1EE85D9-D019-40EB-85C2-05D4F04E4244} = {D21108B9-9362-4BE6-BC3F-1847DBB5CC41}
+		{C72E2B6B-19AC-41FC-A4C0-96F0015BE230} = {7C68A7DC-FEBD-4E73-9C00-1E4913B5C06B}
+		{4B8874F3-3486-46D0-BF7F-504A6819A54E} = {7C68A7DC-FEBD-4E73-9C00-1E4913B5C06B}
+		{A1FC840F-5AA3-466C-B4FD-AC1819C453B3} = {3CA80504-4521-49E2-9B45-1F374FD62213}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBC66989-239A-4A72-9625-6B921FEF66C5}
+	EndGlobalSection
+EndGlobal
